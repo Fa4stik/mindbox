@@ -3,6 +3,7 @@ import {IBoard} from "../../types/Types";
 import {useTypeSelector} from "../../hooks/useTypeSelector";
 import {useActions} from "../../hooks/useActions";
 import more from '../../images/more.png'
+import {logDOM} from "@testing-library/react";
 
 interface ColumnListProps {
     board: IBoard,
@@ -33,18 +34,20 @@ const ColumnList: FC<ColumnListProps> = ({board, children}) => {
 
     const btnHandleAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        board.todos.push({id: board.todos.length, body: 'New todo'})
+        board.todos.push({id: board.todos.length + 1, body: 'New todo'})
         addTodo(board)
     };
 
     return (
         <div className="max-w-[300px] h-full
         bg-gray-100
-        shadow shadow-md
+        shadow-md
         flex flex-col justify-center items-center
         mr-12 p-5 last:mr-0 rounded-lg"
              onDragOver={dragHandleOver}
              onDrop={dragHandleDrop}
+             data-testid="column-list"
+             id="column-list"
         >
             <div className="h-full font-semibold">
                 <h1>{board.title}</h1>
@@ -54,7 +57,10 @@ const ColumnList: FC<ColumnListProps> = ({board, children}) => {
                     {children}
                 </div>
             </div>
-            <button onClick={btnHandleAdd}>
+            <button onClick={btnHandleAdd}
+                    data-testid="add-card"
+                    id="add-card"
+            >
                 <img src={more}
                      alt="Add"
                      className="h-6"

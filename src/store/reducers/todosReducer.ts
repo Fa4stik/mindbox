@@ -1,6 +1,6 @@
 import {BoardState, TodoAction, TypesAction} from "../../types/Types";
 
-const initialState: BoardState = {
+export const initialState: BoardState = {
     boards: [
         {id: 1, title: 'all', todos: [
             {id: 1, body: 'all1'},

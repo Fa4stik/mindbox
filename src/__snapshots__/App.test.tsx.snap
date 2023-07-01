@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TESTS Board render 1`] = `
+<div
+  class="max-w-[300px] h-full
+ bg-gray-100
+ shadow-md
+ flex flex-col justify-center items-center
+ mr-12 p-5 last:mr-0 rounded-lg"
+  data-testid="column-list"
+>
+  <div
+    class="h-full font-semibold"
+  >
+    <h1>
+      all
+    </h1>
+  </div>
+  <div
+    class="flex flex-col py-4"
+  >
+    <div
+      class="flex flex-wrap"
+    >
+      <div
+        class="bg-gray-400 shadow-lg py-3 px-5 mr-2 mb-2 rounded-lg relative min-w-[250px] text-left"
+        data-testid="item-card"
+        draggable="true"
+      >
+        all1
+        <img
+          alt="Edit"
+          class="absolute right-1 top-1 h-3"
+          data-testid="edit-card"
+          src="edit.png"
+        />
+        <img
+          alt="Delete"
+          class="absolute left-1 top-1 h-3"
+          data-testid="delete-card"
+          src="delete.png"
+        />
+      </div>
+      <div
+        class="bg-gray-400 shadow-lg py-3 px-5 mr-2 mb-2 rounded-lg relative min-w-[250px] text-left"
+        data-testid="item-card"
+        draggable="true"
+      >
+        all2
+        <img
+          alt="Edit"
+          class="absolute right-1 top-1 h-3"
+          data-testid="edit-card"
+          src="edit.png"
+        />
+        <img
+          alt="Delete"
+          class="absolute left-1 top-1 h-3"
+          data-testid="delete-card"
+          src="delete.png"
+        />
+      </div>
+    </div>
+  </div>
+  <button
+    data-testid="add-card"
+  >
+    <img
+      alt="Add"
+      class="h-6"
+      src="more.png"
+    />
+  </button>
+</div>
+`;
+
+exports[`TESTS Card render 1`] = `
+<div
+  class="bg-gray-400 shadow-lg py-3 px-5 mr-2 mb-2 rounded-lg relative min-w-[250px] text-left"
+  data-testid="item-card"
+  draggable="true"
+>
+  all1
+  <img
+    alt="Edit"
+    class="absolute right-1 top-1 h-3"
+    data-testid="edit-card"
+    src="edit.png"
+  />
+  <img
+    alt="Delete"
+    class="absolute left-1 top-1 h-3"
+    data-testid="delete-card"
+    src="delete.png"
+  />
+</div>
+`;

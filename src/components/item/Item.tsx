@@ -99,6 +99,8 @@ const Item: FC<ItemProps> = ({board, todo}) => {
              onDragEnd={dragHandleEnd}
              onDragOver={dragHandleOver}
              onDrop={dragHandleDrop}
+             data-testid="item-card"
+             id="item-card"
         >
             {visInput === 'none'
                 ? todo.body
@@ -107,18 +109,20 @@ const Item: FC<ItemProps> = ({board, todo}) => {
                             onChange={textAreaHandleEditTodo}
                             onBlur={textAreaHandleSaveTodo}
                             className="bg-gray-400 w-auto resize-none max-w-[250px] h-auto"
+                            data-testid="textarea-card"
                 />
             }
-            {/*{todo.body}*/}
             <img src={edit}
                  alt="Edit"
                  onClick={imgHandleEdit}
                  className="absolute right-1 top-1 h-3"
+                 data-testid="edit-card"
             />
             <img src={del}
                  alt="Delete"
                  onClick={imgHandleDel}
                  className="absolute left-1 top-1 h-3"
+                 data-testid="delete-card"
             />
         </div>
     );
